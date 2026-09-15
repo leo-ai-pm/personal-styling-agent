@@ -1,0 +1,28 @@
+# Local credentials and configuration
+.env
+.env.*
+!.env.example
+*.env
+*.pem
+*.key
+config/*
+!config/model.example.json
+# Runtime and user data
+reports/
+output/
+logs/
+*.log
+*.sqlite
+*.sqlite3
+*.sqlite*
+*.db
+*.db-*
+# Local tooling
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.DS_Store
+.playwright-cli/
+.idea/
+.vscode/

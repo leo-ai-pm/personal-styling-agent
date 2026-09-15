@@ -1,0 +1,65 @@
+[
+  {
+    "look_id": "M3-LOOK-LM-01",
+    "generator": "svg_code",
+    "image_sha256": "8874c7250bfaad84bc5dd67ee3a86a1c78972f200f3769b8135654ec58c12a44",
+    "output_path": "data/m3_draft/assets/look_lm_01.svg",
+    "license": "MIT"
+  },
+  {
+    "look_id": "M3-LOOK-LM-02",
+    "generator": "svg_code",
+    "image_sha256": "3734310ca4b0da53a58b10d40da52f44740edf12d66b94f9ec2de85da0bbcd64",
+    "output_path": "data/m3_draft/assets/look_lm_02.svg",
+    "license": "MIT"
+  },
+  {
+    "look_id": "M3-LOOK-LM-03",
+    "generator": "svg_code",
+    "image_sha256": "db600948f68ecf0713ffc199889c472bf53f1827176bfdc46fe55e4563cb93f7",
+    "output_path": "data/m3_draft/assets/look_lm_03.svg",
+    "license": "MIT"
+  },
+  {
+    "look_id": "M3-LOOK-LS-01",
+    "generator": "svg_code",
+    "image_sha256": "cedc191bfdb10da238ff9229e740821ab5ff7c338f62edc9ea921911be2ce91a",
+    "output_path": "data/m3_draft/assets/look_ls_01.svg",
+    "license": "MIT"
+  },
+  {
+    "look_id": "M3-LOOK-LS-02",
+    "generator": "svg_code",
+    "image_sha256": "ff38b7236e98b698bd52940da77c4b411642bf97b63757dea7c28d76061b4171",
+    "output_path": "data/m3_draft/assets/look_ls_02.svg",
+    "license": "MIT"
+  },
+  {
+    "look_id": "M3-LOOK-LS-03",
+    "generator": "svg_code",
+    "image_sha256": "4f6c758ab7f7f9f612585ce8a422e6d43d361f258a2e9d99fdc56a40f57527fc",
+    "output_path": "data/m3_draft/assets/look_ls_03.svg",
+    "license": "MIT"
+  },
+  {
+    "look_id": "M3-LOOK-HS-01",
+    "generator": "svg_code",
+    "image_sha256": "a769d68e8b5298a6e7880ae10de2078563d2f10706dbac9974391910acd7c2d2",
+    "output_path": "data/m3_draft/assets/look_hs_01.svg",
+    "license": "MIT"
+  },
+  {
+    "look_id": "M3-LOOK-HS-02",
+    "generator": "svg_code",
+    "image_sha256": "fac66e60b6795e61a220461d786277ed7e622eae136eaa1696475d09ed89ace2",
+    "output_path": "data/m3_draft/assets/look_hs_02.svg",
+    "license": "MIT"
+  },
+  {
+    "look_id": "M3-LOOK-HS-03",
+    "generator": "svg_code",
+    "image_sha256": "d59eb9446c82060baf6f2c42f7823b5038f5a15a44fb139a6024de0e68d54c8a",
+    "output_path": "data/m3_draft/assets/look_hs_03.svg",
+    "license": "MIT"
+  }
+]

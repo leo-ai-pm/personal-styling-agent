@@ -1,0 +1,26 @@
+{
+  "contract_version": "0.1.0",
+  "rule_set_version": "rules_m1_v2_001",
+  "hard_filter_first": true,
+  "when_semantics": "all when_tokens present in normalized request tokens",
+  "exception_semantics": "skip rule if any exception token present",
+  "effect_semantics": "score_delta once per matching slot after union of product and SKU attributes",
+  "sort_order": [
+    "comparative preference hits on replacement slots descending",
+    "current explicit preference hits descending",
+    "existing general preference hits descending",
+    "active rule score descending",
+    "look_id ascending"
+  ],
+  "comparative_minimum": "Comparative request must strictly improve target hits versus current look on replacement slots. No registered improvement returns no_match.",
+  "forbidden_bypass": [
+    "budget",
+    "size",
+    "stock",
+    "sale_status",
+    "keep",
+    "rejection",
+    "registered_image"
+  ],
+  "notice": "Offline scoring convention; not M2 Agent execution."
+}

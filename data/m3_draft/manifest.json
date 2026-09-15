@@ -1,0 +1,43 @@
+{
+  "pack_version": "m3_draft_001",
+  "contract_version": "0.1.0",
+  "tenant_id": "tenant_m1_demo",
+  "data_classification": "synthetic",
+  "as_of": "2026-09-05T12:00:00+08:00",
+  "catalog_version": "catalog_m3_draft_001",
+  "look_asset_version": "look_assets_m3_draft_001",
+  "resource_binding": {
+    "catalog_version": "catalog_m3_draft_001",
+    "inventory_snapshot_id": "inv_m3_draft_001_20260905",
+    "look_asset_version": "look_assets_m3_draft_001",
+    "rule_set_version": "rules_m1_v2_001",
+    "attribute_vocabulary_version": "attrs_m1_v2_001"
+  },
+  "demo_sizes": {
+    "top": {
+      "system": "clothing_alpha",
+      "value": "M"
+    },
+    "bottom": {
+      "system": "clothing_alpha",
+      "value": "M"
+    },
+    "shoes": {
+      "system": "cn_shoe",
+      "value": "38"
+    }
+  },
+  "budget_max_fen": 80000,
+  "scene": "scene:work_commute",
+  "asset_mode": "schematic_sample",
+  "acceptance_status": "sample_fixture",
+  "notice": "开源示意素材，仅用于验证商品映射和交互，不代表商品实拍或上身效果。",
+  "disclaimer": "商品组合示意，不代表实际试穿或尺码效果",
+  "expected_counts": {
+    "products": 12,
+    "skus": 56,
+    "inventory_items": 56,
+    "looks": 13,
+    "new_images": 9
+  }
+}

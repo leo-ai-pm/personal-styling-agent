@@ -1,0 +1,12 @@
+{
+  "asset_version": "look_assets_m1_v2_002",
+  "generator": "svg_code",
+  "license": "MIT",
+  "human_visual_acceptance": false,
+  "look_image_sha256": {
+    "M1V2-LOOK-101": "f6b9da57bad7fd6104c6fb4857038d4b7b66daf49619f618d29c8f4858305ab0",
+    "M1V2-LOOK-112": "dac2d1d7c748bbc18aed8ab081105dadf7dae02e71f85707076a94b35047fa90",
+    "M1V2-LOOK-113": "e9bf102b38822c057d687a7a17036eee9643438d66f77f921ed9a11e285edfe4",
+    "M1V2-LOOK-116": "30eba9f2f462c939b3d15b43cda403912ee0aef7ed9aae642f5873636b5d031a"
+  }
+}

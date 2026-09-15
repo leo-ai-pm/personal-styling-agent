@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="zh-CN">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>个性化穿搭Agent</title><link rel="stylesheet" href="./style.css"><script src="./app.js" defer></script></head>
+<body>
+<section id="local-file-notice" class="local-file-notice" role="status" hidden><span class="eyebrow">PERSONAL STYLING AGENT</span><h1>从这里打开个性化穿搭Agent</h1><p>你打开的是页面文件。完整对话和购物车需要通过运行中的个性化穿搭Agent服务使用。</p><a class="local-start" href="http://127.0.0.1:8765/">进入个性化穿搭Agent</a><p class="launch-help">如果入口尚未启动，请双击项目文件夹里的<strong>启动个性化穿搭Agent.command</strong>，它会启动服务并打开页面。</p></section>
+<header><a class="brand" href="/">个性化穿搭Agent<span>PERSONAL STYLING AGENT</span></a><div class="header-right"><span class="demo-tag">开源 Demo · 模拟商品</span><button id="reset" class="text-button">新会话</button></div></header>
+<main>
+  <section class="look-stage" aria-label="商品组合展示">
+    <div class="stage-meta"><span>YOUR EVERYDAY EDIT</span><span id="version-label">搭配，从一句话开始</span><button id="close-look" class="text-button">返回对话</button></div>
+    <div id="preview-note" class="notice" hidden></div>
+    <div class="look-frame"><img id="look-image" alt="" hidden><div id="empty-look"><span class="eyebrow">穿得自在，也有自己的样子。</span><h1>今天，<br>想怎么穿？</h1><p>告诉我预算、常穿尺码和场景，<br>一起找到你的完整搭配。</p><div class="line-art">上衣 ＋ 下装 ＋ 鞋履</div></div></div>
+    <p class="disclaimer">商品组合示意，不代表实际试穿或尺码效果</p>
+    <div id="look-actions" class="look-actions" hidden><div id="total" class="total" hidden></div><div class="actions"><button id="products-button" class="secondary">商品明细</button><button id="cart" class="primary" disabled>整套加购 · 模拟</button></div></div>
+  </section>
+  <section class="workspace" aria-label="搭配对话">
+    <div class="chat-header"><div class="chat-title"><div><span class="eyebrow">PERSONAL STYLING</span><h2>聊聊你的搭配</h2></div><div class="chat-tools"><button id="cart-button" class="text-button" disabled>购物车 <span id="cart-count">0</span></button><button id="show-look" class="secondary" disabled>看搭配</button><button id="history-button" class="text-button">搭配历史 <span id="history-count">0</span></button></div></div><div class="profile-row"><span id="profile">尚未提供常穿尺码</span><button id="demo-profile" class="text-button">使用 M / M / 38 模拟资料</button></div><div id="config-note" class="notice" hidden></div></div>
+    <div class="conversation" id="messages" role="log" aria-live="polite" aria-label="当前会话"></div>
+    <div class="composer"><span id="status" class="sr-only" aria-hidden="true">先说说你的想法。</span><form id="chat-form"><label for="utterance" class="sr-only">继续聊聊你的搭配</label><div class="input-wrap"><textarea id="utterance" rows="2" maxlength="3000" placeholder="说说你的预算和想法，或继续调整这套搭配…" required></textarea><button id="send" type="submit" aria-label="发送">↑</button></div></form><div class="suggestions"><button type="button">鞋子挺好，衣服换得更休闲一点</button><button type="button">鞋也换掉吧，换双浅色的</button><button type="button">只换上衣，其他别动</button></div><button id="retry" class="text-button" hidden>重试上次请求</button><p class="footnote">商品与库存均为模拟；加购不产生订单。当前搭配图覆盖 M / M / 38 的四套组合。</p></div>
+  </section>
+</main>
+<dialog id="product-dialog"><div class="dialog-head"><h2>这套搭配的商品</h2><button id="close-products" aria-label="关闭商品明细">×</button></div><p>可以选择单件或整套模拟加购，加入时会重新核对价格和库存。</p><div id="products"></div></dialog>
+<dialog id="cart-dialog"><div class="dialog-head"><h2>模拟购物车</h2><button id="close-cart" aria-label="关闭购物车">×</button></div><p>记录本次会话加入的商品；价格以加入时为准，不产生订单或预留库存。</p><div id="cart-items"></div><p id="cart-total"></p></dialog>
+<dialog id="history-dialog"><div class="dialog-head"><h2>搭配手记</h2><button id="close-history" aria-label="关闭历史">×</button></div><p>每次调整，都留有一份。恢复前将重新核对商品。</p><div id="history-list"></div></dialog>
+</body></html>

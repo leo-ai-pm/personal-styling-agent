@@ -1,0 +1,383 @@
+[
+  {
+    "contract_version": "0.1.0",
+    "catalog_version": "catalog_m3_draft_001",
+    "tenant_id": "tenant_m1_demo",
+    "look_id": "M1V2-LOOK-101",
+    "look_asset_version": "look_assets_m3_draft_001",
+    "model_asset_version": "schematic_sample_v1",
+    "items": {
+      "top": "M1V2-T101-M",
+      "bottom": "M1V2-B101-M",
+      "shoes": "M1V2-S101-38"
+    },
+    "image_url": "/data/m1_v2/assets/look_101.svg",
+    "image_sha256": "f6b9da57bad7fd6104c6fb4857038d4b7b66daf49619f618d29c8f4858305ab0",
+    "view": "product_layout",
+    "model_identity_id": "schematic_layout",
+    "pose_id": "three_product_cards",
+    "background_id": "sample_sage",
+    "disclaimer_code": "schematic_reference_not_fit",
+    "active": true,
+    "origin": {
+      "origin_type": "self_created",
+      "source_name": "开源商品组合示意",
+      "source_ref": "scripts/generate_sample_assets.py",
+      "is_simulated": true,
+      "rights_confirmed": true
+    },
+    "review_status": "accepted_in_base_pack",
+    "base_visual_acceptance_ref": "user_visual_acceptance_20260905"
+  },
+  {
+    "contract_version": "0.1.0",
+    "catalog_version": "catalog_m3_draft_001",
+    "tenant_id": "tenant_m1_demo",
+    "look_id": "M1V2-LOOK-112",
+    "look_asset_version": "look_assets_m3_draft_001",
+    "model_asset_version": "schematic_sample_v1",
+    "items": {
+      "top": "M1V2-T102-M",
+      "bottom": "M1V2-B102-M",
+      "shoes": "M1V2-S101-38"
+    },
+    "image_url": "/data/m1_v2/assets/look_112.svg",
+    "image_sha256": "dac2d1d7c748bbc18aed8ab081105dadf7dae02e71f85707076a94b35047fa90",
+    "view": "product_layout",
+    "model_identity_id": "schematic_layout",
+    "pose_id": "three_product_cards",
+    "background_id": "sample_sage",
+    "disclaimer_code": "schematic_reference_not_fit",
+    "active": true,
+    "origin": {
+      "origin_type": "self_created",
+      "source_name": "开源商品组合示意",
+      "source_ref": "scripts/generate_sample_assets.py",
+      "is_simulated": true,
+      "rights_confirmed": true
+    },
+    "review_status": "accepted_in_base_pack",
+    "base_visual_acceptance_ref": "user_visual_acceptance_20260905"
+  },
+  {
+    "contract_version": "0.1.0",
+    "catalog_version": "catalog_m3_draft_001",
+    "tenant_id": "tenant_m1_demo",
+    "look_id": "M1V2-LOOK-113",
+    "look_asset_version": "look_assets_m3_draft_001",
+    "model_asset_version": "schematic_sample_v1",
+    "items": {
+      "top": "M1V2-T102-M",
+      "bottom": "M1V2-B102-M",
+      "shoes": "M1V2-S102-38"
+    },
+    "image_url": "/data/m1_v2/assets/look_113.svg",
+    "image_sha256": "e9bf102b38822c057d687a7a17036eee9643438d66f77f921ed9a11e285edfe4",
+    "view": "product_layout",
+    "model_identity_id": "schematic_layout",
+    "pose_id": "three_product_cards",
+    "background_id": "sample_sage",
+    "disclaimer_code": "schematic_reference_not_fit",
+    "active": true,
+    "origin": {
+      "origin_type": "self_created",
+      "source_name": "开源商品组合示意",
+      "source_ref": "scripts/generate_sample_assets.py",
+      "is_simulated": true,
+      "rights_confirmed": true
+    },
+    "review_status": "accepted_in_base_pack",
+    "base_visual_acceptance_ref": "user_visual_acceptance_20260905"
+  },
+  {
+    "contract_version": "0.1.0",
+    "catalog_version": "catalog_m3_draft_001",
+    "tenant_id": "tenant_m1_demo",
+    "look_id": "M1V2-LOOK-116",
+    "look_asset_version": "look_assets_m3_draft_001",
+    "model_asset_version": "schematic_sample_v1",
+    "items": {
+      "top": "M1V2-T102-M",
+      "bottom": "M1V2-B101-M",
+      "shoes": "M1V2-S101-38"
+    },
+    "image_url": "/data/m1_v2/assets/look_116.svg",
+    "image_sha256": "30eba9f2f462c939b3d15b43cda403912ee0aef7ed9aae642f5873636b5d031a",
+    "view": "product_layout",
+    "model_identity_id": "schematic_layout",
+    "pose_id": "three_product_cards",
+    "background_id": "sample_sage",
+    "disclaimer_code": "schematic_reference_not_fit",
+    "active": true,
+    "origin": {
+      "origin_type": "self_created",
+      "source_name": "开源商品组合示意",
+      "source_ref": "scripts/generate_sample_assets.py",
+      "is_simulated": true,
+      "rights_confirmed": true
+    },
+    "review_status": "accepted_in_base_pack",
+    "base_visual_acceptance_ref": "user_visual_acceptance_20260905"
+  },
+  {
+    "contract_version": "0.1.0",
+    "catalog_version": "catalog_m3_draft_001",
+    "tenant_id": "tenant_m1_demo",
+    "look_id": "M3-LOOK-LM-01",
+    "look_asset_version": "look_assets_m3_draft_001",
+    "model_asset_version": "schematic_sample_v1",
+    "items": {
+      "top": "M3-T201-M",
+      "bottom": "M3-B201-M",
+      "shoes": "M3-S201-38"
+    },
+    "image_url": "/data/m3_draft/assets/look_lm_01.svg",
+    "image_sha256": "8874c7250bfaad84bc5dd67ee3a86a1c78972f200f3769b8135654ec58c12a44",
+    "view": "product_layout",
+    "model_identity_id": "schematic_layout",
+    "pose_id": "three_product_cards",
+    "background_id": "sample_sage",
+    "disclaimer_code": "schematic_reference_not_fit",
+    "active": false,
+    "origin": {
+      "origin_type": "self_created",
+      "source_name": "开源商品组合示意",
+      "source_ref": "scripts/generate_sample_assets.py",
+      "is_simulated": true,
+      "rights_confirmed": true
+    },
+    "review_status": "sample_fixture"
+  },
+  {
+    "contract_version": "0.1.0",
+    "catalog_version": "catalog_m3_draft_001",
+    "tenant_id": "tenant_m1_demo",
+    "look_id": "M3-LOOK-LM-02",
+    "look_asset_version": "look_assets_m3_draft_001",
+    "model_asset_version": "schematic_sample_v1",
+    "items": {
+      "top": "M3-T202-M",
+      "bottom": "M3-B202-M",
+      "shoes": "M3-S201-38"
+    },
+    "image_url": "/data/m3_draft/assets/look_lm_02.svg",
+    "image_sha256": "3734310ca4b0da53a58b10d40da52f44740edf12d66b94f9ec2de85da0bbcd64",
+    "view": "product_layout",
+    "model_identity_id": "schematic_layout",
+    "pose_id": "three_product_cards",
+    "background_id": "sample_sage",
+    "disclaimer_code": "schematic_reference_not_fit",
+    "active": false,
+    "origin": {
+      "origin_type": "self_created",
+      "source_name": "开源商品组合示意",
+      "source_ref": "scripts/generate_sample_assets.py",
+      "is_simulated": true,
+      "rights_confirmed": true
+    },
+    "review_status": "sample_fixture"
+  },
+  {
+    "contract_version": "0.1.0",
+    "catalog_version": "catalog_m3_draft_001",
+    "tenant_id": "tenant_m1_demo",
+    "look_id": "M3-LOOK-LM-03",
+    "look_asset_version": "look_assets_m3_draft_001",
+    "model_asset_version": "schematic_sample_v1",
+    "items": {
+      "top": "M3-T202-M",
+      "bottom": "M3-B202-M",
+      "shoes": "M3-S202-38"
+    },
+    "image_url": "/data/m3_draft/assets/look_lm_03.svg",
+    "image_sha256": "db600948f68ecf0713ffc199889c472bf53f1827176bfdc46fe55e4563cb93f7",
+    "view": "product_layout",
+    "model_identity_id": "schematic_layout",
+    "pose_id": "three_product_cards",
+    "background_id": "sample_sage",
+    "disclaimer_code": "schematic_reference_not_fit",
+    "active": false,
+    "origin": {
+      "origin_type": "self_created",
+      "source_name": "开源商品组合示意",
+      "source_ref": "scripts/generate_sample_assets.py",
+      "is_simulated": true,
+      "rights_confirmed": true
+    },
+    "review_status": "sample_fixture"
+  },
+  {
+    "contract_version": "0.1.0",
+    "catalog_version": "catalog_m3_draft_001",
+    "tenant_id": "tenant_m1_demo",
+    "look_id": "M3-LOOK-LS-01",
+    "look_asset_version": "look_assets_m3_draft_001",
+    "model_asset_version": "schematic_sample_v1",
+    "items": {
+      "top": "M3-T201-S",
+      "bottom": "M3-B201-S",
+      "shoes": "M3-S201-36"
+    },
+    "image_url": "/data/m3_draft/assets/look_ls_01.svg",
+    "image_sha256": "cedc191bfdb10da238ff9229e740821ab5ff7c338f62edc9ea921911be2ce91a",
+    "view": "product_layout",
+    "model_identity_id": "schematic_layout",
+    "pose_id": "three_product_cards",
+    "background_id": "sample_sage",
+    "disclaimer_code": "schematic_reference_not_fit",
+    "active": false,
+    "origin": {
+      "origin_type": "self_created",
+      "source_name": "开源商品组合示意",
+      "source_ref": "scripts/generate_sample_assets.py",
+      "is_simulated": true,
+      "rights_confirmed": true
+    },
+    "review_status": "sample_fixture"
+  },
+  {
+    "contract_version": "0.1.0",
+    "catalog_version": "catalog_m3_draft_001",
+    "tenant_id": "tenant_m1_demo",
+    "look_id": "M3-LOOK-LS-02",
+    "look_asset_version": "look_assets_m3_draft_001",
+    "model_asset_version": "schematic_sample_v1",
+    "items": {
+      "top": "M3-T202-S",
+      "bottom": "M3-B202-S",
+      "shoes": "M3-S201-36"
+    },
+    "image_url": "/data/m3_draft/assets/look_ls_02.svg",
+    "image_sha256": "ff38b7236e98b698bd52940da77c4b411642bf97b63757dea7c28d76061b4171",
+    "view": "product_layout",
+    "model_identity_id": "schematic_layout",
+    "pose_id": "three_product_cards",
+    "background_id": "sample_sage",
+    "disclaimer_code": "schematic_reference_not_fit",
+    "active": false,
+    "origin": {
+      "origin_type": "self_created",
+      "source_name": "开源商品组合示意",
+      "source_ref": "scripts/generate_sample_assets.py",
+      "is_simulated": true,
+      "rights_confirmed": true
+    },
+    "review_status": "sample_fixture"
+  },
+  {
+    "contract_version": "0.1.0",
+    "catalog_version": "catalog_m3_draft_001",
+    "tenant_id": "tenant_m1_demo",
+    "look_id": "M3-LOOK-LS-03",
+    "look_asset_version": "look_assets_m3_draft_001",
+    "model_asset_version": "schematic_sample_v1",
+    "items": {
+      "top": "M3-T202-S",
+      "bottom": "M3-B202-S",
+      "shoes": "M3-S202-36"
+    },
+    "image_url": "/data/m3_draft/assets/look_ls_03.svg",
+    "image_sha256": "4f6c758ab7f7f9f612585ce8a422e6d43d361f258a2e9d99fdc56a40f57527fc",
+    "view": "product_layout",
+    "model_identity_id": "schematic_layout",
+    "pose_id": "three_product_cards",
+    "background_id": "sample_sage",
+    "disclaimer_code": "schematic_reference_not_fit",
+    "active": false,
+    "origin": {
+      "origin_type": "self_created",
+      "source_name": "开源商品组合示意",
+      "source_ref": "scripts/generate_sample_assets.py",
+      "is_simulated": true,
+      "rights_confirmed": true
+    },
+    "review_status": "sample_fixture"
+  },
+  {
+    "contract_version": "0.1.0",
+    "catalog_version": "catalog_m3_draft_001",
+    "tenant_id": "tenant_m1_demo",
+    "look_id": "M3-LOOK-HS-01",
+    "look_asset_version": "look_assets_m3_draft_001",
+    "model_asset_version": "schematic_sample_v1",
+    "items": {
+      "top": "M1V2-T101-S",
+      "bottom": "M1V2-B101-S",
+      "shoes": "M1V2-S101-36"
+    },
+    "image_url": "/data/m3_draft/assets/look_hs_01.svg",
+    "image_sha256": "a769d68e8b5298a6e7880ae10de2078563d2f10706dbac9974391910acd7c2d2",
+    "view": "product_layout",
+    "model_identity_id": "schematic_layout",
+    "pose_id": "three_product_cards",
+    "background_id": "sample_sage",
+    "disclaimer_code": "schematic_reference_not_fit",
+    "active": false,
+    "origin": {
+      "origin_type": "self_created",
+      "source_name": "开源商品组合示意",
+      "source_ref": "scripts/generate_sample_assets.py",
+      "is_simulated": true,
+      "rights_confirmed": true
+    },
+    "review_status": "sample_fixture"
+  },
+  {
+    "contract_version": "0.1.0",
+    "catalog_version": "catalog_m3_draft_001",
+    "tenant_id": "tenant_m1_demo",
+    "look_id": "M3-LOOK-HS-02",
+    "look_asset_version": "look_assets_m3_draft_001",
+    "model_asset_version": "schematic_sample_v1",
+    "items": {
+      "top": "M1V2-T102-S",
+      "bottom": "M1V2-B102-S",
+      "shoes": "M1V2-S101-36"
+    },
+    "image_url": "/data/m3_draft/assets/look_hs_02.svg",
+    "image_sha256": "fac66e60b6795e61a220461d786277ed7e622eae136eaa1696475d09ed89ace2",
+    "view": "product_layout",
+    "model_identity_id": "schematic_layout",
+    "pose_id": "three_product_cards",
+    "background_id": "sample_sage",
+    "disclaimer_code": "schematic_reference_not_fit",
+    "active": false,
+    "origin": {
+      "origin_type": "self_created",
+      "source_name": "开源商品组合示意",
+      "source_ref": "scripts/generate_sample_assets.py",
+      "is_simulated": true,
+      "rights_confirmed": true
+    },
+    "review_status": "sample_fixture"
+  },
+  {
+    "contract_version": "0.1.0",
+    "catalog_version": "catalog_m3_draft_001",
+    "tenant_id": "tenant_m1_demo",
+    "look_id": "M3-LOOK-HS-03",
+    "look_asset_version": "look_assets_m3_draft_001",
+    "model_asset_version": "schematic_sample_v1",
+    "items": {
+      "top": "M1V2-T102-S",
+      "bottom": "M1V2-B102-S",
+      "shoes": "M1V2-S102-36"
+    },
+    "image_url": "/data/m3_draft/assets/look_hs_03.svg",
+    "image_sha256": "d59eb9446c82060baf6f2c42f7823b5038f5a15a44fb139a6024de0e68d54c8a",
+    "view": "product_layout",
+    "model_identity_id": "schematic_layout",
+    "pose_id": "three_product_cards",
+    "background_id": "sample_sage",
+    "disclaimer_code": "schematic_reference_not_fit",
+    "active": false,
+    "origin": {
+      "origin_type": "self_created",
+      "source_name": "开源商品组合示意",
+      "source_ref": "scripts/generate_sample_assets.py",
+      "is_simulated": true,
+      "rights_confirmed": true
+    },
+    "review_status": "sample_fixture"
+  }
+]

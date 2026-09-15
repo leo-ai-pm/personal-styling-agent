@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="1080" viewBox="0 0 720 1080" role="img" aria-label="三件模拟商品的组合示意">
+<rect width="720" height="1080" fill="#eeefe7"/>
+<g font-family="sans-serif" fill="#35402e"><text x="40" y="65" font-size="16" letter-spacing="3">PERSONAL STYLING AGENT</text>
+<text x="40" y="118" font-size="32">商品组合示意</text><g transform="translate(40,170)"><rect width="640" height="210" rx="18" fill="#fff"/>
+<g transform="translate(8,25)" fill="#ece6d4" stroke="#68715d" stroke-width="2"><path d="M45 20 15 50 38 74 53 62 53 135 137 135 137 62 152 74 175 50 145 20 115 10 Q95 35 75 10Z"/></g>
+<text x="205" y="45" font-size="15" fill="#798368">上衣 · M 码</text>
+<text x="205" y="88" font-size="18">奶油白不对称无袖剪裁上衣</text>
+<text x="205" y="127" font-size="13" fill="#798368">M1V2-T101-M</text>
+<text x="205" y="174" font-size="25">¥249</text></g><g transform="translate(40,405)"><rect width="640" height="210" rx="18" fill="#fff"/>
+<g transform="translate(8,25)" fill="#655146" stroke="#68715d" stroke-width="2"><path d="M48 10 142 10 151 147 110 147 95 65 80 147 39 147Z"/></g>
+<text x="205" y="45" font-size="15" fill="#798368">下装 · M 码</text>
+<text x="205" y="88" font-size="18">巧克力色垂坠双褶阔腿长裤</text>
+<text x="205" y="127" font-size="13" fill="#798368">M1V2-B101-M</text>
+<text x="205" y="174" font-size="25">¥279</text></g><g transform="translate(40,640)"><rect width="640" height="210" rx="18" fill="#fff"/>
+<g transform="translate(8,25)" fill="#803c48" stroke="#68715d" stroke-width="2"><path d="M28 55 72 48 90 73 142 81 Q170 85 167 112 L26 112 Q14 105 28 55Z"/><path d="M28 120 167 120" fill="none"/></g>
+<text x="205" y="45" font-size="15" fill="#798368">鞋履 · 38 码</text>
+<text x="205" y="88" font-size="18">酒红细带方头低跟鞋</text>
+<text x="205" y="127" font-size="13" fill="#798368">M1V2-S101-38</text>
+<text x="205" y="174" font-size="25">¥269</text></g>
+<text x="40" y="930" font-size="18">三件合计</text><text x="40" y="980" font-size="38">¥797</text>
+<text x="40" y="1030" font-size="15" fill="#798368">开源示意素材 · 非商品实拍、非试穿效果</text></g></svg>

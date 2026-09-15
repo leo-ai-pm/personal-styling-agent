@@ -1,0 +1,26 @@
+{
+  "previous": "cases_v1.json",
+  "current": "cases_v2.json",
+  "retained_failure_report": "live_017_main_round1.json",
+  "changes": [
+    {
+      "case_id": "SCOPE-001",
+      "turn": 3,
+      "old": "exactly M3-LOOK-LS-02 / ¥457",
+      "new": "any recommendation respecting explicitly expanded scope, actual SKU and budget",
+      "reason": "Previous no-match proposed ¥437; user explicitly allowed entire outfit changes, so accepting that valid proposal is authorized. Hardcoding ¥457 was a checker error."
+    },
+    {
+      "case_id": "SCOPE-001",
+      "turn": 4,
+      "old": "exactly M3-LOOK-LS-03",
+      "new": "clothes unchanged; any recommendation must actually have light shoes; no-match allowed with history unchanged",
+      "reason": "The valid preceding whole-outfit choice may already wear light shoes. No alternate registered light shoe may remain; changing back to wine to force a result is not acceptable."
+    },
+    {
+      "case_id": "added cases",
+      "new": "already-light shoes, declined expansion memory, four exact-name contrast cases",
+      "reason": "Root confirmed semantic requirements and new concrete failures; existing product-ID and screenshot assertions remain unchanged."
+    }
+  ]
+}

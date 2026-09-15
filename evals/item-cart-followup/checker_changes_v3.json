@@ -1,0 +1,14 @@
+{
+  "from": "item-cart-followup-v2",
+  "to": "item-cart-followup-v3",
+  "reason": "Independent text review of 018 found screenshot final explicit refusal still repeats scope expansion proposal. Tighten existing original user utterance; no case removed or weakened.",
+  "case_id": "SCREENSHOT-001",
+  "turn_no": 8,
+  "utterance": "我是说只换鞋子，别的不要换",
+  "added_expectations": {
+    "proposal_present": false,
+    "text_not_regex": "是否允许|是否愿意.{0,12}(更换|换).*上衣"
+  },
+  "prior_evidence": "reports/m2/item-cart-followup/evaluation/live_018_full_round1.json",
+  "old_reports_and_dataset_preserved": true
+}

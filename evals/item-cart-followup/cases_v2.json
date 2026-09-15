@@ -1,0 +1,1639 @@
+{
+  "dataset_version": "item-cart-followup-v2",
+  "basis": "user screenshot and docs/ITEM_CART_FOLLOWUP.md; independent from frozen P0 dataset",
+  "cases": [
+    {
+      "case_id": "SCREENSHOT-001",
+      "setup": "none",
+      "tags": [
+        "main",
+        "screenshot",
+        "multiturn"
+      ],
+      "turns": [
+        {
+          "utterance": "预算500，上衣S码、下装S码、鞋36码，日常通勤，帮我搭配一套。",
+          "expect": {
+            "statuses": [
+              "recommendation"
+            ],
+            "look_id": "M3-LOOK-LS-01",
+            "cart_delta": 0
+          }
+        },
+        {
+          "action": {
+            "operation": "view_history",
+            "history_index": 0
+          },
+          "expect": {
+            "statuses": [
+              "action_completed"
+            ],
+            "cart_delta": 0,
+            "history_unchanged": true,
+            "profile_unchanged": true
+          }
+        },
+        {
+          "utterance": "鞋子加入购物车",
+          "expect": {
+            "cart_sku": "M3-S201-36",
+            "quantity": 1,
+            "statuses": [
+              "action_completed"
+            ],
+            "operation": "add_item_to_cart",
+            "cart_delta": 1,
+            "history_unchanged": true,
+            "profile_unchanged": true,
+            "event": "item_add_succeeded"
+          }
+        },
+        {
+          "utterance": "上衣换一下",
+          "expect": {
+            "statuses": [
+              "no_match"
+            ],
+            "operation": "modify_current",
+            "replace_slots": [
+              "top"
+            ],
+            "history_unchanged": true,
+            "cart_delta": 0,
+            "text_concepts": [
+              [
+                "图",
+                "素材"
+              ],
+              [
+                "上衣"
+              ]
+            ]
+          }
+        },
+        {
+          "utterance": "裤子要浅色的",
+          "expect": {
+            "statuses": [
+              "no_match"
+            ],
+            "operation": "modify_current",
+            "replace_slots": [
+              "bottom"
+            ],
+            "history_unchanged": true,
+            "cart_delta": 0,
+            "text_concepts": [
+              [
+                "图",
+                "素材"
+              ],
+              [
+                "裤",
+                "下装"
+              ]
+            ]
+          }
+        },
+        {
+          "utterance": "鞋子还有别的吗？",
+          "expect": {
+            "statuses": [
+              "action_completed"
+            ],
+            "operation": "browse_catalog",
+            "query_slots": [
+              "shoes"
+            ],
+            "cart_delta": 0,
+            "history_unchanged": true,
+            "profile_unchanged": true
+          }
+        },
+        {
+          "utterance": "你帮我搭配",
+          "expect": {
+            "statuses": [
+              "no_match"
+            ],
+            "operation": "modify_current",
+            "replace_slots": [
+              "shoes"
+            ],
+            "carry_forward_unmentioned": true,
+            "cart_delta": 0,
+            "history_unchanged": true,
+            "profile_unchanged": true,
+            "text_concepts": [
+              [
+                "图",
+                "素材"
+              ],
+              [
+                "上衣",
+                "衣服"
+              ],
+              [
+                "下装",
+                "裤"
+              ]
+            ]
+          }
+        },
+        {
+          "utterance": "我是说只换鞋子，别的不要换",
+          "expect": {
+            "statuses": [
+              "no_match"
+            ],
+            "operation": "modify_current",
+            "replace_slots": [
+              "shoes"
+            ],
+            "cart_delta": 0,
+            "history_unchanged": true
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "SCOPE-001",
+      "setup": "low_s",
+      "tags": [
+        "main",
+        "scope",
+        "multiturn"
+      ],
+      "turns": [
+        {
+          "utterance": "鞋子还有别的吗？",
+          "expect": {
+            "statuses": [
+              "action_completed"
+            ],
+            "operation": "browse_catalog",
+            "cart_delta": 0,
+            "history_unchanged": true,
+            "profile_unchanged": true
+          }
+        },
+        {
+          "utterance": "你帮我搭配",
+          "expect": {
+            "statuses": [
+              "no_match"
+            ],
+            "operation": "modify_current",
+            "replace_slots": [
+              "shoes"
+            ],
+            "carry_forward_unmentioned": true,
+            "cart_delta": 0,
+            "history_unchanged": true,
+            "profile_unchanged": true,
+            "text_concepts": [
+              [
+                "图",
+                "素材"
+              ],
+              [
+                "上衣",
+                "衣服"
+              ],
+              [
+                "下装",
+                "裤"
+              ]
+            ]
+          }
+        },
+        {
+          "utterance": "那就整套重新搭配，衣服也可以换",
+          "expect": {
+            "statuses": [
+              "recommendation"
+            ],
+            "operation": "modify_current",
+            "cart_delta": 0
+          }
+        },
+        {
+          "utterance": "这次只换成浅色鞋，衣服都不动",
+          "expect": {
+            "statuses": [
+              "recommendation",
+              "no_match"
+            ],
+            "operation": "modify_current",
+            "replace_slots": [
+              "shoes"
+            ],
+            "cart_delta": 0,
+            "same_slots": [
+              "top",
+              "bottom"
+            ],
+            "recommended_attributes": [
+              [
+                "shoes",
+                "color:light"
+              ]
+            ],
+            "history_unchanged_on_no_match": true
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "SCOPE-PARA-01",
+      "setup": "low_s",
+      "tags": [
+        "scope",
+        "paraphrase"
+      ],
+      "turns": [
+        {
+          "utterance": "我先看看还有哪些鞋子",
+          "expect": {
+            "operation": "browse_catalog",
+            "cart_delta": 0,
+            "history_unchanged": true,
+            "profile_unchanged": true
+          }
+        },
+        {
+          "utterance": "你来选吧",
+          "expect": {
+            "statuses": [
+              "no_match"
+            ],
+            "operation": "modify_current",
+            "replace_slots": [
+              "shoes"
+            ],
+            "carry_forward_unmentioned": true,
+            "cart_delta": 0,
+            "history_unchanged": true,
+            "profile_unchanged": true,
+            "text_concepts": [
+              [
+                "图",
+                "素材"
+              ],
+              [
+                "上衣",
+                "衣服"
+              ],
+              [
+                "下装",
+                "裤"
+              ]
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "SCOPE-PARA-02",
+      "setup": "low_s",
+      "tags": [
+        "scope",
+        "paraphrase"
+      ],
+      "turns": [
+        {
+          "utterance": "我先看看还有哪些鞋子",
+          "expect": {
+            "operation": "browse_catalog",
+            "cart_delta": 0,
+            "history_unchanged": true,
+            "profile_unchanged": true
+          }
+        },
+        {
+          "utterance": "那你推荐一双",
+          "expect": {
+            "statuses": [
+              "no_match"
+            ],
+            "operation": "modify_current",
+            "replace_slots": [
+              "shoes"
+            ],
+            "carry_forward_unmentioned": true,
+            "cart_delta": 0,
+            "history_unchanged": true,
+            "profile_unchanged": true,
+            "text_concepts": [
+              [
+                "图",
+                "素材"
+              ],
+              [
+                "上衣",
+                "衣服"
+              ],
+              [
+                "下装",
+                "裤"
+              ]
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "SCOPE-PARA-03",
+      "setup": "low_s",
+      "tags": [
+        "scope",
+        "paraphrase"
+      ],
+      "turns": [
+        {
+          "utterance": "我先看看还有哪些鞋子",
+          "expect": {
+            "operation": "browse_catalog",
+            "cart_delta": 0,
+            "history_unchanged": true,
+            "profile_unchanged": true
+          }
+        },
+        {
+          "utterance": "按你觉得合适的配",
+          "expect": {
+            "statuses": [
+              "no_match"
+            ],
+            "operation": "modify_current",
+            "replace_slots": [
+              "shoes"
+            ],
+            "carry_forward_unmentioned": true,
+            "cart_delta": 0,
+            "history_unchanged": true,
+            "profile_unchanged": true,
+            "text_concepts": [
+              [
+                "图",
+                "素材"
+              ],
+              [
+                "上衣",
+                "衣服"
+              ],
+              [
+                "下装",
+                "裤"
+              ]
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "SCOPE-PARA-04",
+      "setup": "low_s",
+      "tags": [
+        "scope",
+        "paraphrase"
+      ],
+      "turns": [
+        {
+          "utterance": "我先看看还有哪些鞋子",
+          "expect": {
+            "operation": "browse_catalog",
+            "cart_delta": 0,
+            "history_unchanged": true,
+            "profile_unchanged": true
+          }
+        },
+        {
+          "utterance": "帮我挑一下",
+          "expect": {
+            "statuses": [
+              "no_match"
+            ],
+            "operation": "modify_current",
+            "replace_slots": [
+              "shoes"
+            ],
+            "carry_forward_unmentioned": true,
+            "cart_delta": 0,
+            "history_unchanged": true,
+            "profile_unchanged": true,
+            "text_concepts": [
+              [
+                "图",
+                "素材"
+              ],
+              [
+                "上衣",
+                "衣服"
+              ],
+              [
+                "下装",
+                "裤"
+              ]
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "SCOPE-WHOLE",
+      "setup": "low_s",
+      "tags": [
+        "scope",
+        "contrast"
+      ],
+      "turns": [
+        {
+          "utterance": "鞋子还有哪些",
+          "expect": {
+            "operation": "browse_catalog",
+            "cart_delta": 0,
+            "history_unchanged": true,
+            "profile_unchanged": true
+          }
+        },
+        {
+          "utterance": "不只是鞋，上衣裤子也一起重新搭一套",
+          "expect": {
+            "statuses": [
+              "recommendation"
+            ],
+            "operation": "modify_current",
+            "replace_slots": [
+              "top",
+              "bottom",
+              "shoes"
+            ],
+            "carry_forward_unmentioned": false,
+            "cart_delta": 0
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "CORRECTION-001",
+      "setup": "old_bug_low_s",
+      "tags": [
+        "main",
+        "correction"
+      ],
+      "turns": [
+        {
+          "utterance": "我是说只换鞋子，别的不要换",
+          "expect": {
+            "statuses": [
+              "no_match"
+            ],
+            "operation": "modify_current",
+            "replace_slots": [
+              "shoes"
+            ],
+            "cart_delta": 0,
+            "history_unchanged": true,
+            "look_id": "M3-LOOK-LS-02",
+            "text_concepts": [
+              [
+                "更正",
+                "纠正",
+                "原先",
+                "第1套",
+                "第 1 套"
+              ],
+              [
+                "图",
+                "素材"
+              ]
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "CART-CURRENT",
+      "setup": "low_s",
+      "tags": [
+        "cart",
+        "quantity",
+        "idempotency"
+      ],
+      "turns": [
+        {
+          "utterance": "把当前这双鞋加进购物车，两双",
+          "expect": {
+            "cart_sku": "M3-S201-36",
+            "quantity": 2,
+            "statuses": [
+              "action_completed"
+            ],
+            "operation": "add_item_to_cart",
+            "cart_delta": 1,
+            "history_unchanged": true,
+            "profile_unchanged": true,
+            "event": "item_add_succeeded"
+          }
+        },
+        {
+          "replay_previous": true,
+          "expect": {
+            "cart_delta": 0,
+            "history_unchanged": true,
+            "model_calls": 0,
+            "identical_replay": true
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "CART-COMMAND-01",
+      "setup": "low_m",
+      "tags": [
+        "cart",
+        "paraphrase"
+      ],
+      "turns": [
+        {
+          "utterance": "鞋子加入购物车",
+          "expect": {
+            "cart_sku": "M3-S201-38",
+            "quantity": 1,
+            "statuses": [
+              "action_completed"
+            ],
+            "operation": "add_item_to_cart",
+            "cart_delta": 1,
+            "history_unchanged": true,
+            "profile_unchanged": true,
+            "event": "item_add_succeeded"
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "CART-COMMAND-02",
+      "setup": "low_m",
+      "tags": [
+        "cart",
+        "paraphrase"
+      ],
+      "turns": [
+        {
+          "utterance": "帮我把这双鞋放进购物车",
+          "expect": {
+            "cart_sku": "M3-S201-38",
+            "quantity": 1,
+            "statuses": [
+              "action_completed"
+            ],
+            "operation": "add_item_to_cart",
+            "cart_delta": 1,
+            "history_unchanged": true,
+            "profile_unchanged": true,
+            "event": "item_add_succeeded"
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "CART-COMMAND-03",
+      "setup": "low_m",
+      "tags": [
+        "cart",
+        "paraphrase"
+      ],
+      "turns": [
+        {
+          "utterance": "只买这双，帮我加购",
+          "expect": {
+            "cart_sku": "M3-S201-38",
+            "quantity": 1,
+            "statuses": [
+              "action_completed"
+            ],
+            "operation": "add_item_to_cart",
+            "cart_delta": 1,
+            "history_unchanged": true,
+            "profile_unchanged": true,
+            "event": "item_add_succeeded"
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "CONSULT-NOT-CART-01",
+      "setup": "low_s",
+      "tags": [
+        "negative",
+        "consult"
+      ],
+      "turns": [
+        {
+          "utterance": "单买这双鞋呢？",
+          "expect": {
+            "statuses": [
+              "action_completed"
+            ],
+            "operation": "consult",
+            "text_not_regex": "(?:暂不|不)支持单件加购",
+            "cart_delta": 0,
+            "history_unchanged": true,
+            "profile_unchanged": true
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "CONSULT-NOT-CART-02",
+      "setup": "low_s",
+      "tags": [
+        "negative",
+        "consult"
+      ],
+      "turns": [
+        {
+          "utterance": "可以只买这双鞋吗？",
+          "expect": {
+            "statuses": [
+              "action_completed"
+            ],
+            "operation": "consult",
+            "text_not_regex": "(?:暂不|不)支持单件加购",
+            "cart_delta": 0,
+            "history_unchanged": true,
+            "profile_unchanged": true
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "CONSULT-NOT-CART-03",
+      "setup": "low_s",
+      "tags": [
+        "negative",
+        "consult"
+      ],
+      "turns": [
+        {
+          "utterance": "这双鞋能加购物车吗？",
+          "expect": {
+            "statuses": [
+              "action_completed"
+            ],
+            "operation": "consult",
+            "text_not_regex": "(?:暂不|不)支持单件加购",
+            "cart_delta": 0,
+            "history_unchanged": true,
+            "profile_unchanged": true
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "CONSULT-NOT-CART-04",
+      "setup": "low_s",
+      "tags": [
+        "negative",
+        "consult"
+      ],
+      "turns": [
+        {
+          "utterance": "我只是问能不能买，还没说要加购",
+          "expect": {
+            "statuses": [
+              "action_completed"
+            ],
+            "operation": "consult",
+            "text_not_regex": "(?:暂不|不)支持单件加购",
+            "cart_delta": 0,
+            "history_unchanged": true,
+            "profile_unchanged": true
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "DENY-CART-01",
+      "setup": "low_s",
+      "tags": [
+        "negative",
+        "denial"
+      ],
+      "turns": [
+        {
+          "utterance": "不要把鞋加购物车",
+          "expect": {
+            "cart_delta": 0,
+            "history_unchanged": true,
+            "profile_unchanged": true
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "DENY-CART-02",
+      "setup": "low_s",
+      "tags": [
+        "negative",
+        "denial"
+      ],
+      "turns": [
+        {
+          "utterance": "先别买，给我看看",
+          "expect": {
+            "cart_delta": 0,
+            "history_unchanged": true,
+            "profile_unchanged": true
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "DENY-CART-03",
+      "setup": "low_s",
+      "tags": [
+        "negative",
+        "denial"
+      ],
+      "turns": [
+        {
+          "utterance": "我不想加购这双鞋",
+          "expect": {
+            "cart_delta": 0,
+            "history_unchanged": true,
+            "profile_unchanged": true
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "CART-AFTER-QUESTION",
+      "setup": "low_s",
+      "tags": [
+        "cart",
+        "multiturn",
+        "focus"
+      ],
+      "turns": [
+        {
+          "utterance": "这双鞋单价多少",
+          "expect": {
+            "operation": "consult",
+            "cart_delta": 0,
+            "history_unchanged": true,
+            "profile_unchanged": true
+          }
+        },
+        {
+          "utterance": "好，那帮我加入一双",
+          "expect": {
+            "cart_sku": "M3-S201-36",
+            "quantity": 1,
+            "statuses": [
+              "action_completed"
+            ],
+            "operation": "add_item_to_cart",
+            "cart_delta": 1,
+            "history_unchanged": true,
+            "profile_unchanged": true,
+            "event": "item_add_succeeded"
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "CART-EXPLICIT-HISTORY",
+      "setup": "history_low_s",
+      "tags": [
+        "cart",
+        "history"
+      ],
+      "turns": [
+        {
+          "utterance": "把第一套的鞋子加到购物车",
+          "expect": {
+            "cart_sku": "M3-S201-36",
+            "quantity": 1,
+            "statuses": [
+              "action_completed"
+            ],
+            "operation": "add_item_to_cart",
+            "cart_delta": 1,
+            "history_unchanged": true,
+            "profile_unchanged": true,
+            "event": "item_add_succeeded"
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "CART-VISIBLE-HISTORY",
+      "setup": "history_low_s",
+      "tags": [
+        "cart",
+        "history",
+        "visible"
+      ],
+      "turns": [
+        {
+          "action": {
+            "operation": "view_history",
+            "history_index": 0
+          },
+          "expect": {
+            "cart_delta": 0,
+            "history_unchanged": true,
+            "profile_unchanged": true
+          }
+        },
+        {
+          "utterance": "把这双鞋加到购物车",
+          "view_history_index": 0,
+          "expect": {
+            "cart_sku": "M3-S201-36",
+            "quantity": 1,
+            "statuses": [
+              "action_completed"
+            ],
+            "operation": "add_item_to_cart",
+            "cart_delta": 1,
+            "history_unchanged": true,
+            "profile_unchanged": true,
+            "event": "item_add_succeeded"
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "CART-CATALOG-ORDINAL",
+      "setup": "none",
+      "tags": [
+        "cart",
+        "catalog"
+      ],
+      "turns": [
+        {
+          "utterance": "看看38码的鞋有哪些",
+          "expect": {
+            "operation": "browse_catalog",
+            "cart_delta": 0,
+            "history_unchanged": true,
+            "profile_unchanged": true
+          }
+        },
+        {
+          "utterance": "列表第二款，加入一双",
+          "expect": {
+            "cart_sku": "M3-S201-38",
+            "quantity": 1,
+            "statuses": [
+              "action_completed"
+            ],
+            "operation": "add_item_to_cart",
+            "cart_delta": 1,
+            "history_unchanged": true,
+            "profile_unchanged": true,
+            "event": "item_add_succeeded"
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "CART-CATALOG-OUT-OF-RANGE",
+      "setup": "none",
+      "tags": [
+        "cart",
+        "catalog",
+        "negative"
+      ],
+      "turns": [
+        {
+          "utterance": "看看36码的鞋有哪些",
+          "expect": {
+            "operation": "browse_catalog",
+            "cart_delta": 0,
+            "history_unchanged": true,
+            "profile_unchanged": true
+          }
+        },
+        {
+          "utterance": "把第九款加购",
+          "expect": {
+            "statuses": [
+              "clarification"
+            ],
+            "pending_cart": true,
+            "cart_delta": 0,
+            "history_unchanged": true,
+            "profile_unchanged": true
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "CART-TARGET-ANSWER",
+      "setup": "low_s",
+      "tags": [
+        "cart",
+        "pending",
+        "ambiguity"
+      ],
+      "turns": [
+        {
+          "utterance": "把这件加到购物车",
+          "expect": {
+            "statuses": [
+              "clarification"
+            ],
+            "pending_cart": true,
+            "cart_delta": 0,
+            "history_unchanged": true,
+            "profile_unchanged": true
+          }
+        },
+        {
+          "utterance": "我指鞋子",
+          "expect": {
+            "cart_sku": "M3-S201-36",
+            "quantity": 1,
+            "statuses": [
+              "action_completed"
+            ],
+            "operation": "add_item_to_cart",
+            "cart_delta": 1,
+            "history_unchanged": true,
+            "profile_unchanged": true,
+            "event": "item_add_succeeded"
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "CART-SIZE-ANSWER",
+      "setup": "none",
+      "tags": [
+        "main",
+        "cart",
+        "pending",
+        "no_image_dependency"
+      ],
+      "turns": [
+        {
+          "utterance": "把象牙白简洁薄底休闲鞋加购物车，两双",
+          "expect": {
+            "statuses": [
+              "clarification"
+            ],
+            "pending_cart": true,
+            "clarification_field": "cart_size",
+            "cart_delta": 0,
+            "history_unchanged": true,
+            "profile_unchanged": true
+          }
+        },
+        {
+          "utterance": "36码",
+          "expect": {
+            "cart_sku": "M3-S202-36",
+            "quantity": 2,
+            "pending_cart": false,
+            "statuses": [
+              "action_completed"
+            ],
+            "operation": "add_item_to_cart",
+            "cart_delta": 1,
+            "history_unchanged": true,
+            "profile_unchanged": true,
+            "event": "item_add_succeeded"
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "CART-SIZE-LOCAL",
+      "setup": "low_m",
+      "tags": [
+        "cart",
+        "size",
+        "local_filter"
+      ],
+      "turns": [
+        {
+          "utterance": "这双鞋给我加购36码的一双",
+          "expect": {
+            "cart_sku": "M3-S201-36",
+            "quantity": 1,
+            "statuses": [
+              "action_completed"
+            ],
+            "operation": "add_item_to_cart",
+            "cart_delta": 1,
+            "history_unchanged": true,
+            "profile_unchanged": true,
+            "event": "item_add_succeeded"
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "CART-NO-LOOK",
+      "setup": "none",
+      "tags": [
+        "cart",
+        "no_image_dependency"
+      ],
+      "turns": [
+        {
+          "utterance": "象牙白简洁薄底休闲鞋，39码，帮我加入一双",
+          "expect": {
+            "cart_sku": "M3-S202-39",
+            "quantity": 1,
+            "statuses": [
+              "action_completed"
+            ],
+            "operation": "add_item_to_cart",
+            "cart_delta": 1,
+            "history_unchanged": true,
+            "profile_unchanged": true,
+            "event": "item_add_succeeded"
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "CART-PENDING-CANCEL",
+      "setup": "none",
+      "tags": [
+        "pending",
+        "cancel",
+        "negative"
+      ],
+      "turns": [
+        {
+          "utterance": "把象牙白简洁薄底休闲鞋加入购物车",
+          "expect": {
+            "statuses": [
+              "clarification"
+            ],
+            "pending_cart": true,
+            "cart_delta": 0,
+            "history_unchanged": true,
+            "profile_unchanged": true
+          }
+        },
+        {
+          "utterance": "算了，先不买",
+          "expect": {
+            "operation": "cancel_pending",
+            "pending_cart": false,
+            "cart_delta": 0,
+            "history_unchanged": true,
+            "profile_unchanged": true
+          }
+        },
+        {
+          "utterance": "36",
+          "expect": {
+            "cart_delta": 0,
+            "history_unchanged": true
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "CART-PENDING-QUERY",
+      "setup": "none",
+      "tags": [
+        "pending",
+        "switch",
+        "negative"
+      ],
+      "turns": [
+        {
+          "utterance": "把象牙白简洁薄底休闲鞋加入购物车",
+          "expect": {
+            "statuses": [
+              "clarification"
+            ],
+            "pending_cart": true,
+            "cart_delta": 0,
+            "history_unchanged": true,
+            "profile_unchanged": true
+          }
+        },
+        {
+          "utterance": "先别买，看看上衣有哪些",
+          "expect": {
+            "operation": "browse_catalog",
+            "pending_cart": false,
+            "cart_delta": 0,
+            "history_unchanged": true,
+            "profile_unchanged": true
+          }
+        },
+        {
+          "utterance": "36",
+          "expect": {
+            "cart_delta": 0,
+            "history_unchanged": true
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "CART-PENDING-CONSULT",
+      "setup": "none",
+      "tags": [
+        "pending",
+        "consult",
+        "negative"
+      ],
+      "turns": [
+        {
+          "utterance": "象牙白简洁薄底休闲鞋加购",
+          "expect": {
+            "statuses": [
+              "clarification"
+            ],
+            "pending_cart": true,
+            "cart_delta": 0,
+            "history_unchanged": true,
+            "profile_unchanged": true
+          }
+        },
+        {
+          "utterance": "先不加，我想知道这鞋多少钱",
+          "expect": {
+            "operation": "consult",
+            "pending_cart": false,
+            "cart_delta": 0,
+            "history_unchanged": true,
+            "profile_unchanged": true
+          }
+        },
+        {
+          "utterance": "36",
+          "expect": {
+            "cart_delta": 0,
+            "history_unchanged": true
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "CART-STOCK-ZERO",
+      "setup": "low_s",
+      "tags": [
+        "cart",
+        "fault"
+      ],
+      "turns": [
+        {
+          "utterance": "把这双鞋加入购物车",
+          "mutations": [
+            {
+              "field": "stock_qty",
+              "sku": "$current.shoes",
+              "value": 0
+            }
+          ],
+          "expect": {
+            "statuses": [
+              "action_failed"
+            ],
+            "operation": "add_item_to_cart",
+            "event": "item_add_failed",
+            "cart_delta": 0,
+            "history_unchanged": true,
+            "profile_unchanged": true
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "CART-PRODUCT-DOWN",
+      "setup": "low_s",
+      "tags": [
+        "cart",
+        "fault"
+      ],
+      "turns": [
+        {
+          "utterance": "把这双鞋加入购物车",
+          "mutations": [
+            {
+              "field": "product_active",
+              "sku": "$current.shoes",
+              "value": false
+            }
+          ],
+          "expect": {
+            "statuses": [
+              "action_failed"
+            ],
+            "operation": "add_item_to_cart",
+            "event": "item_add_failed",
+            "cart_delta": 0,
+            "history_unchanged": true,
+            "profile_unchanged": true
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "CART-PRICE-CHANGE",
+      "setup": "low_s",
+      "tags": [
+        "cart",
+        "price",
+        "pending"
+      ],
+      "turns": [
+        {
+          "utterance": "这双鞋多少钱",
+          "expect": {
+            "operation": "consult",
+            "cart_delta": 0,
+            "history_unchanged": true,
+            "profile_unchanged": true
+          }
+        },
+        {
+          "utterance": "加购这双鞋，两双",
+          "mutations": [
+            {
+              "field": "price_delta",
+              "sku": "$current.shoes",
+              "value": 1000
+            }
+          ],
+          "expect": {
+            "statuses": [
+              "clarification"
+            ],
+            "clarification_field": "cart_price_confirmation",
+            "pending_cart": true,
+            "cart_delta": 0,
+            "history_unchanged": true,
+            "profile_unchanged": true
+          }
+        },
+        {
+          "utterance": "确认，按新的价格加购两双",
+          "expect": {
+            "cart_sku": "M3-S201-36",
+            "quantity": 2,
+            "unit_price_fen": 19900,
+            "pending_cart": false,
+            "statuses": [
+              "action_completed"
+            ],
+            "operation": "add_item_to_cart",
+            "cart_delta": 1,
+            "history_unchanged": true,
+            "profile_unchanged": true,
+            "event": "item_add_succeeded"
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "CART-PRICE-CHANGES-AGAIN",
+      "setup": "low_s",
+      "tags": [
+        "cart",
+        "price",
+        "fault"
+      ],
+      "turns": [
+        {
+          "utterance": "把这双鞋加入购物车",
+          "mutations": [
+            {
+              "field": "price_delta",
+              "sku": "$current.shoes",
+              "value": 1000
+            }
+          ],
+          "expect": {
+            "statuses": [
+              "clarification"
+            ],
+            "pending_cart": true,
+            "cart_delta": 0,
+            "history_unchanged": true,
+            "profile_unchanged": true
+          }
+        },
+        {
+          "utterance": "确认加购",
+          "mutations": [
+            {
+              "field": "price_delta",
+              "sku": "$current.shoes",
+              "value": 1000
+            }
+          ],
+          "expect": {
+            "statuses": [
+              "clarification"
+            ],
+            "pending_cart": true,
+            "cart_delta": 0,
+            "history_unchanged": true
+          }
+        },
+        {
+          "utterance": "确认，按现在的价格买",
+          "expect": {
+            "cart_sku": "M3-S201-36",
+            "quantity": 1,
+            "unit_price_fen": 20900,
+            "pending_cart": false,
+            "statuses": [
+              "action_completed"
+            ],
+            "operation": "add_item_to_cart",
+            "cart_delta": 1,
+            "history_unchanged": true,
+            "profile_unchanged": true,
+            "event": "item_add_succeeded"
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "CART-SOLD-OUT-DURING-SIZE",
+      "setup": "none",
+      "tags": [
+        "cart",
+        "pending",
+        "fault"
+      ],
+      "turns": [
+        {
+          "utterance": "象牙白简洁薄底休闲鞋加购",
+          "expect": {
+            "statuses": [
+              "clarification"
+            ],
+            "pending_cart": true,
+            "cart_delta": 0,
+            "history_unchanged": true,
+            "profile_unchanged": true
+          }
+        },
+        {
+          "utterance": "36码",
+          "mutations": [
+            {
+              "field": "stock_qty",
+              "sku": "M3-S202-36",
+              "value": 0
+            }
+          ],
+          "expect": {
+            "statuses": [
+              "action_failed"
+            ],
+            "event": "item_add_failed",
+            "cart_delta": 0,
+            "history_unchanged": true,
+            "profile_unchanged": true
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "CART-THEN-CONSULT",
+      "setup": "low_s",
+      "tags": [
+        "cart",
+        "post_action",
+        "negative"
+      ],
+      "turns": [
+        {
+          "utterance": "这双鞋加入购物车",
+          "expect": {
+            "cart_sku": "M3-S201-36",
+            "quantity": 1,
+            "statuses": [
+              "action_completed"
+            ],
+            "operation": "add_item_to_cart",
+            "cart_delta": 1,
+            "history_unchanged": true,
+            "profile_unchanged": true,
+            "event": "item_add_succeeded"
+          }
+        },
+        {
+          "utterance": "买了多少件？",
+          "expect": {
+            "cart_delta": 0,
+            "history_unchanged": true
+          }
+        },
+        {
+          "utterance": "鞋子到底多少钱",
+          "expect": {
+            "operation": "consult",
+            "cart_delta": 0,
+            "history_unchanged": true,
+            "profile_unchanged": true
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "LIGHT-SHOE-ALREADY-LIGHT",
+      "setup": "history_low_s",
+      "tags": [
+        "scope",
+        "negative",
+        "light_attribute"
+      ],
+      "turns": [
+        {
+          "utterance": "只给我换双浅色鞋，衣服保持不变",
+          "expect": {
+            "statuses": [
+              "no_match",
+              "clarification"
+            ],
+            "cart_delta": 0,
+            "history_unchanged": true,
+            "profile_unchanged": true
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "EXPAND-SCOPE-DECLINE",
+      "setup": "low_s",
+      "tags": [
+        "scope",
+        "decline",
+        "multiturn"
+      ],
+      "turns": [
+        {
+          "utterance": "上衣换一下，裤子鞋子别动",
+          "expect": {
+            "statuses": [
+              "no_match"
+            ],
+            "cart_delta": 0,
+            "history_unchanged": true,
+            "profile_unchanged": true
+          }
+        },
+        {
+          "utterance": "不愿意，别动裤子",
+          "expect": {
+            "statuses": [
+              "no_match"
+            ],
+            "proposal_present": false,
+            "text_not_regex": "(?:是否|愿意|允许)[^\\n]{0,50}[？?]",
+            "cart_delta": 0,
+            "history_unchanged": true,
+            "profile_unchanged": true
+          }
+        },
+        {
+          "utterance": "继续按原来只换上衣",
+          "expect": {
+            "statuses": [
+              "no_match"
+            ],
+            "proposal_present": false,
+            "text_not_regex": "(?:是否|愿意|允许)[^\\n]{0,50}[？?]",
+            "cart_delta": 0,
+            "history_unchanged": true,
+            "profile_unchanged": true
+          }
+        },
+        {
+          "utterance": "那看看鞋子有哪些",
+          "expect": {
+            "operation": "browse_catalog",
+            "cart_delta": 0,
+            "history_unchanged": true,
+            "profile_unchanged": true
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "CATALOG-EXACT-LACE",
+      "setup": "none",
+      "tags": [
+        "cart",
+        "named_product",
+        "contrast"
+      ],
+      "turns": [
+        {
+          "utterance": "象牙白薄底系带休闲鞋，36码，加入一双",
+          "expect": {
+            "statuses": [
+              "action_completed"
+            ],
+            "operation": "add_item_to_cart",
+            "cart_delta": 1,
+            "history_unchanged": true,
+            "profile_unchanged": true,
+            "event": "item_add_succeeded",
+            "cart_sku": "M1V2-S102-36",
+            "quantity": 1
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "CATALOG-EXACT-NO-LACE",
+      "setup": "none",
+      "tags": [
+        "cart",
+        "named_product",
+        "contrast"
+      ],
+      "turns": [
+        {
+          "utterance": "不是带鞋带那款。我说象牙白简洁薄底休闲鞋，36码，加一双",
+          "expect": {
+            "statuses": [
+              "action_completed"
+            ],
+            "operation": "add_item_to_cart",
+            "cart_delta": 1,
+            "history_unchanged": true,
+            "profile_unchanged": true,
+            "event": "item_add_succeeded",
+            "cart_sku": "M3-S202-36",
+            "quantity": 1
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "CATALOG-EXACT-WINE-OLD",
+      "setup": "none",
+      "tags": [
+        "cart",
+        "named_product",
+        "contrast"
+      ],
+      "turns": [
+        {
+          "utterance": "酒红细带方头低跟鞋，38码，帮我加一双",
+          "expect": {
+            "statuses": [
+              "action_completed"
+            ],
+            "operation": "add_item_to_cart",
+            "cart_delta": 1,
+            "history_unchanged": true,
+            "profile_unchanged": true,
+            "event": "item_add_succeeded",
+            "cart_sku": "M1V2-S101-38",
+            "quantity": 1
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "CATALOG-EXACT-WINE-NEW",
+      "setup": "none",
+      "tags": [
+        "cart",
+        "named_product",
+        "contrast"
+      ],
+      "turns": [
+        {
+          "utterance": "酒红方头一字带低跟鞋，38码，帮我加一双",
+          "expect": {
+            "statuses": [
+              "action_completed"
+            ],
+            "operation": "add_item_to_cart",
+            "cart_delta": 1,
+            "history_unchanged": true,
+            "profile_unchanged": true,
+            "event": "item_add_succeeded",
+            "cart_sku": "M3-S201-38",
+            "quantity": 1
+          }
+        }
+      ]
+    }
+  ]
+}

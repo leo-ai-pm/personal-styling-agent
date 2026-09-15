@@ -1,0 +1,93 @@
+{
+  "kind": "synthetic_M1_live_browser_regression",
+  "note": "原始M0冻结集不变；补充检验实际页面局部范围复述与SKU一致、提案接受。真实模型每次重新解析。",
+  "turns": [
+    {
+      "id": "budget",
+      "text": "预算800，帮我搭一套。",
+      "status": "clarification",
+      "history_count": 0
+    },
+    {
+      "id": "scene",
+      "text": "平时上班穿，舒服一点。",
+      "status": "recommendation",
+      "look": "M1V2-LOOK-101",
+      "history_count": 1
+    },
+    {
+      "id": "keep_shoes",
+      "text": "鞋子挺好，衣服换得更休闲一点。",
+      "status": "recommendation",
+      "look": "M1V2-LOOK-112",
+      "replace_slots": [
+        "top",
+        "bottom"
+      ],
+      "history_count": 2,
+      "consumed_keep_slots": [
+        "shoes"
+      ],
+      "ack_contains": "保留鞋子"
+    },
+    {
+      "id": "replace_shoes",
+      "text": "鞋也换掉吧，换双浅色的。",
+      "status": "recommendation",
+      "look": "M1V2-LOOK-113",
+      "replace_slots": [
+        "shoes"
+      ],
+      "history_count": 3
+    },
+    {
+      "id": "view_first",
+      "text": "让我看看第一套。",
+      "status": "action_completed",
+      "current": "lv-3",
+      "history_count": 3
+    },
+    {
+      "id": "restore_first",
+      "text": "恢复第一套搭配。",
+      "status": "recommendation",
+      "look": "M1V2-LOOK-101",
+      "history_count": 4
+    },
+    {
+      "id": "only_top",
+      "text": "只换上衣，裤子和鞋保持原样。",
+      "status": "recommendation",
+      "look": "M1V2-LOOK-116",
+      "replace_slots": [
+        "top"
+      ],
+      "history_count": 5,
+      "consumed_keep_slots": [
+        "bottom",
+        "shoes"
+      ]
+    },
+    {
+      "id": "cart",
+      "text": "这套满意，整套加进购物车。",
+      "status": "action_completed",
+      "cart_count": 3,
+      "history_count": 5
+    },
+    {
+      "id": "budget_no_match",
+      "text": "预算改成700元，重新搭一套。",
+      "status": "no_match",
+      "history_count": 5
+    },
+    {
+      "id": "accept_proposal",
+      "text": "好，就按你建议的预算来。",
+      "status": "recommendation",
+      "look": "M1V2-LOOK-113",
+      "budget": 73700,
+      "history_count": 6
+    }
+  ]
+}
